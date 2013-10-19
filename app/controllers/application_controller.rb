@@ -27,4 +27,7 @@ class ApplicationController < ActionController::Base
       raise ActiveRecord::RecordNotFound
     end
   end
+
+  # Workaround for bug in Rails 3.0.x. See: https://github.com/rails/rails/issues/9619
+  config.relative_url_root = ""
 end
